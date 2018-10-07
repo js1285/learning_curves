@@ -13,7 +13,7 @@ from sklearn import preprocessing
 import matplotlib.pyplot as plt
 from azure.storage.file import FileService
 
-# global variables
+# global variables, modified in notebook running on azure 
 seed = 42
 '''
 regul = {'lr_exp_decay' : False,
