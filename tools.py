@@ -258,7 +258,8 @@ def load_data(source_dir='./data/final_project', scale_configs = True, data_from
         for file_or_dir in generator:
             # print(file_or_dir.name)
             myfile = file_service.get_file_to_bytes('jochenfileshare', 'dlproject_data/final_project', file_or_dir.name) 
-            tmp = json.loads(myfile.content)
+            tmp = json.loads(myfile.content.decode("utf-8"))            
+            # tmp = json.loads(myfile.content)
             configs.append(tmp['config'])   # list of dicts
             learning_curves.append(tmp['learning_curve'])
     else:
